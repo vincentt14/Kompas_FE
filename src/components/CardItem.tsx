@@ -1,7 +1,10 @@
-const CardItem = () => {
+import { IGroup } from "../utils/utility"
+
+const CardItem = ({tanggal, data}: IGroup) => {
   return (
-    <div>
-      abnggg
+    <div className="border rounded-sm shadow-md p-3 flex flex-col">
+      <p>{tanggal}</p>
+      {data.map((item) => item.jam)}
     </div>
   )
 }
