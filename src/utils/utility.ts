@@ -23,6 +23,15 @@ export const msToTime = (duration: number): string => {
   return `${hours}:${minutes}`;
 };
 
+export interface IGroup {
+  tanggal: string;
+  data: {
+    nama: string;
+    pengeluaran: number;
+    jam: string;
+  }[];
+}
+
 /*
 0 :
   tanggal: "25 Agustus"
@@ -40,15 +49,6 @@ export const msToTime = (duration: number): string => {
     ]
   }
 */
-
-export interface IGroup {
-  tanggal: string;
-  data: {
-    nama: string;
-    pengeluaran: number;
-    jam: string;
-  }[];
-}
 
 export const groupingPerDay = (expense: IExpense[]): IGroup[] => {
   const grouped: IGroup[] = [];
